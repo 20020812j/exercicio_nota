@@ -1,1 +1,28 @@
-<?php\n\nclass Usuario {\n    private \$nomeUsuario;\n    private \$logado = false;\n    \n    public function __construct(\$nome) {\n        \$this->nomeUsuario = \$nome;\n    }\n    \n    public function autenticar() {\n        \$this->logado = true;\n    }\n    \n    public function estaLogado() {\n        return \$this->logado;\n    }\n    \n    public function getNome() {\n        return \$this->nomeUsuario;\n    }\n}\n\n?>"
+<?php
+
+class Usuario {
+    private $nome;
+    private $logado = false;
+    
+    public function __construct($nome) {
+        $this->nome = $nome;
+    }
+    
+    public function login() {
+        $this->logado = true;
+    }
+    
+    public function logout() {
+        $this->logado = false;
+    }
+    
+    public function estaLogado() {
+        return $this->logado;
+    }
+    
+    public function getNome() {
+        return $this->nome;
+    }
+}
+
+?>

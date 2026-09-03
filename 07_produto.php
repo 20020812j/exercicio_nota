@@ -1,1 +1,23 @@
-<?php\n\n// Recuperar parâmetros da URL\nif (isset($_GET['id']) && isset($_GET['categoria'])) {\n    $id = $_GET['id'];\n    $categoria = $_GET['categoria'];\n    \n    echo \"Produto $id da categoria $categoria\\n\";\n} else {\n    echo \"Parâmetros não fornecidos.\\n\";\n    echo \"Acesse com: produto.php?id=15&categoria=eletronicos\\n\";\n}\n\necho \"\\n\";\n\n// Exemplos\necho \"Exemplos simulados:\\n\\n\";\n\n// Simulando GET\n\$_GET['id'] = '15';\n\$_GET['categoria'] = 'eletronicos';\n\necho \"Quando acessa: produto.php?id=15&categoria=eletronicos\\n\";\necho \"Resultado: Produto \" . \$_GET['id'] . \" da categoria \" . \$_GET['categoria'] . \"\\n\";\n\necho \"\\n// \\$_GET é um array associativo que armazena parâmetros da URL\\n\";\necho \"// string URL query?param1=valor1&param2=valor2\\n\";\n\n?>"
+<?php
+
+// Simular parâmetros da URL: exemplo.php?id=15&categoria=eletronicos
+$_GET['id'] = '15';
+$_GET['categoria'] = 'eletronicos';
+
+echo "Produto recebido:\n\n";
+
+if (isset($_GET['id']) && isset($_GET['categoria'])) {
+    $id = $_GET['id'];
+    $categoria = $_GET['categoria'];
+    
+    echo "ID: " . $id . "\n";
+    echo "Categoria: " . $categoria . "\n";
+} else {
+    echo "ID ou categoria não fornecido!\n";
+}
+
+echo "\n---\n";
+echo "URL seria: produto.php?id=15&categoria=eletronicos\n";
+echo "$_GET é um array com os parâmetros da URL!\n";
+
+?>
