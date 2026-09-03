@@ -3,8 +3,8 @@
 class Veiculo {
     private $quilometragem = 0;
     
-    public function rodar($km) {
-        $this->quilometragem += $km;
+    public function rodar($quilometros) {
+        $this->quilometragem += $quilometros;
     }
     
     public function exibirQuilometragem() {
@@ -12,21 +12,21 @@ class Veiculo {
     }
 }
 
-echo "Veículos:\n\n";
+echo "Teste do veículo:\n\n";
 
 $carro = new Veiculo();
 $moto = new Veiculo();
 
-// Carro rodando
+echo "Carro antes de rodar: " . $carro->exibirQuilometragem() . " km\n";
+
 $carro->rodar(150);
-echo "Carro: " . $carro->exibirQuilometragem() . " km\n";
+echo "Carro depois de rodar 150 km: " . $carro->exibirQuilometragem() . " km\n";
 
 $carro->rodar(250);
-echo "Carro: " . $carro->exibirQuilometragem() . " km\n";
+echo "Carro depois de rodar mais 250 km: " . $carro->exibirQuilometragem() . " km\n";
 
-// Moto rodando
 $moto->rodar(500);
-echo "Moto: " . $moto->exibirQuilometragem() . " km\n";
+echo "Moto depois de rodar 500 km: " . $moto->exibirQuilometragem() . " km\n";
 
 echo "\n---\n";
 echo "Cada objeto tem sua própria quilometragem!\n";
